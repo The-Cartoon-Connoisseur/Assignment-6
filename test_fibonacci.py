@@ -15,3 +15,8 @@ def test_zero_terms():
 def test_one_term():
     fib = Fibonacci(1)
     assert list(fib) == [0]
+
+#Test 4
+def test_non_integer_input():
+    with pytest.raises(ValueError):
+        Fibonacci("ten")
