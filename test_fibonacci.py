@@ -25,8 +25,16 @@ def test_non_integer_input():
 def test_negative_input():
     with pytest.raises(ValueError):
         Fibonacci(-5)
-        
+
 #Test 6
 def test_is_iterable():
     fib = Fibonacci(5)
     assert iter(fib) is fib
+
+#Test 7
+def test_stop_iteration():
+    fib = Fibonacci(2)
+    next(fib)
+    next(fib)
+    with pytest.raises(StopIteration):
+        next(fib)
