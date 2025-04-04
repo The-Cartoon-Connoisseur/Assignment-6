@@ -20,3 +20,8 @@ def test_one_term():
 def test_non_integer_input():
     with pytest.raises(ValueError):
         Fibonacci("ten")
+
+#Test 5
+def test_negative_input():
+    with pytest.raises(ValueError):
+        Fibonacci(-5)
