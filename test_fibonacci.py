@@ -10,3 +10,8 @@ def test_fibonacci_sequence():
 def test_zero_terms():
     fib = Fibonacci(0)
     assert list(fib) == []
+
+#Test 3
+def test_one_term():
+    fib = Fibonacci(1)
+    assert list(fib) == [0]
